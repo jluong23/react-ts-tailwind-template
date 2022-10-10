@@ -4,14 +4,12 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#5c6ac4',
-        secondary: '#ecc94b'
+        primary: colors.blue[400],
       }
-
     },
   },
   plugins: [],

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-/* example of applying custom 'base styles' */
-/* h1{
-    @apply text-primary
-} */    
+h1{
+    @apply text-2xl 
+}    

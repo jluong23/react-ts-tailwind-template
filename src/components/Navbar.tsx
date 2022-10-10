@@ -1,14 +1,21 @@
 import {  Link } from "react-router-dom";
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-function Navbar() {
+interface NavbarProps {
+  sideBarVisible: boolean
+  setSideBarVisible: (input: boolean) => void
+}
+
+function Navbar({sideBarVisible,setSideBarVisible} : NavbarProps) {
   return (
-    <ul className="bg-primary p-2">
-        <li>
-          <Link to="/">
-            <h1>Home</h1>
-          </Link>
-        </li>
-    </ul>
+    <nav className="flex p-1 bg-primary items-center space-x-1">
+      <span className="text-lg cursor-pointer" onClick={() => {setSideBarVisible(!sideBarVisible)}}>
+        <GiHamburgerMenu/>
+      </span>
+      <Link to="/">
+        <h1 className="font-bold">Tailwind React Template</h1>
+      </Link>
+    </nav>
   );
 }
 
